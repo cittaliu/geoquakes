@@ -1,8 +1,35 @@
+h1 {
+  text-align: center;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: bolder;
+}
+
 .container {
-  padding-bottom: 50px;
+  margin-top: 50px;
+  padding-bottom: 30px;
 }
 
 #map {
   height: 600px;
-  margin-top: 20px;
+  margin-top: none;
+
+}
+.magnitude-3{
+  background-color: #FFEF1D;
+}
+.magnitude-4{
+  background-color: #FFB426;
+}
+.magnitude-5{
+  background-color: #FF7A1D
+}
+.magnitude-6{
+  background-color: #FF4214;
+}
+.magnitude-7{
+  background-color: #FF3814;
+}
+.magnitude-8{
+  background-color: #FF260F;
 }

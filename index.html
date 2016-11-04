@@ -15,7 +15,6 @@
     <script src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
 
     <!-- Google Maps API -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHLett8djBo62dDXj0EjCimF8Rd6E8cxg"></script>
 
     <!-- Handlebars -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
@@ -26,15 +25,25 @@
     <title>Quake Watch</title>
   </head>
   <body>
+      <h1>Earthquakes from the Past Week</h1>
       <div class="container">
         <div class="row">
           <div class="col-md-6">
             <div id="map"></div>
+
           </div>
           <div class="col-md-6">
             <div id="info">
-              <h1>Earthquakes from the past week:</h1>
               <!-- <p>M 4.2 - 1km ESE of Fontana, California / 123 hours ago </p> -->
+              <ul id="earthquakes-list" class="list-group">
+                <script id="earthquake-li-template" type="text/x-handlebars-template">
+                  {{#each earthquakes}}
+                    <li class="list-group-item magnitude-{{this.Margnitude}}">
+                      <p>Margnitude-<strong>{{this.Margnitude}}</strong>; Location-<strong>{{this.Location}}</strong>; Time-<strong>{{this.Time}}</strong></p>
+                    </li>
+                  {{/each}}
+                </script>
+              </ul>
             </div>
           </div>
         </div>
